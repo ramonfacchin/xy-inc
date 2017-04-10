@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "zup-products",
+		"_postman_id": "fe2b14de-d090-5e71-d9b9-f44a461da758",
+		"description": "REST test suite for Zup's audition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "products-list-all",
+			"request": {
+				"url": "http://localhost:8080/products",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Lists all registered products"
+			},
+			"response": []
+		},
+		{
+			"name": "products-load",
+			"request": {
+				"url": "http://localhost:8080/products/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Loads product with URL specified id"
+			},
+			"response": []
+		},
+		{
+			"name": "products-delete",
+			"request": {
+				"url": "http://localhost:8080/products/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "Deletes the product with specified id"
+			},
+			"response": []
+		},
+		{
+			"name": "products-update",
+			"request": {
+				"url": "http://localhost:8080/products/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : null,\n\t\"name\" : \"nomeDoProdutoooooo400000\"\n}"
+				},
+				"description": "Changes data for the product with specified id"
+			},
+			"response": []
+		},
+		{
+			"name": "products-register",
+			"request": {
+				"url": "http://localhost:8080/products",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : null,\n\t\"name\" : \"nomeDoProduto\"\n}"
+				},
+				"description": "Registers a new product"
+			},
+			"response": []
+		}
+	]
+}
