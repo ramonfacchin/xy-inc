@@ -18,6 +18,10 @@ Por se tratar de uma aplicação simples, foi desenvolvido um único módulo jav
 
 A estrutura de pacotes se dá com um pacote "pai" que possui o script de inicialização da aplicação e outros 3 pacotes que seguem o modelo MVC.
 
+A escolha do Spring (Boot) se deve à possibilidade de uma rápida implementação dentro do formato "microservice", já que a ferramenta oferece uma dinâmica de convenção-sobre-configuração (o que poupa o desenvolvedor de codificar toda a infraestrutura necessária para que possa focar no domínio do problema) e ao baixo acoplamento.
+
+Uma classe de testes de integração foi desenvolvida (`br.com.ramonfacchin.ZupProductsApplicationTests.java`) para garantir o funcionamento da cadeia de chamadas no que diz respeito ao código Java escrito. Para a parte de comunicação Web, para ter certeza de que as chamadas REST funcionariam da forma esperada, foi criada uma coleção de chamadas compatível com o Postman REST Client que pode ser importada diretamente na aplicação.
+
 ## Pacote br.com.ramonfacchin.web
 
 Este pacote possui o código responsável pelos Controladores da aplicação - isto é, as classes que tornarão os serviços disponíveis e que tratam da comunicação entre o cliente e a camada de modelo, responsável pelas tarefas de manipulação dos dados.
